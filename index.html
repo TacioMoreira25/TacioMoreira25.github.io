@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tácio Moreira — Desenvolvedor Full Stack e Backend</title>
+  <meta name="description" content="Tácio Moreira — Desenvolvedor Full Stack e Backend, Engenharia da Computação. Projetos: Orbit, Relay, GastoSync e Robô Inspetor." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Aplica o tema salvo antes de renderizar (evita "flash" de tema errado)
+    document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
+  </script>
+</head>
+<body>
+  <main class="wrapper">
+    <header class="header">
+      <div class="header-text">
+        <h1>Tácio Moreira</h1>
+        <p class="bio">
+          Desenvolvedor Full Stack e Backend. Engenharia da Computação, Vitória da Conquista, BA.<br />
+          Construo aplicações web, serviços backend e ferramentas para desenvolvedores.
+        </p>
+      </div>
+      <button id="theme-toggle" class="theme-btn" aria-label="Alternar tema claro e escuro" title="Alternar tema">
+        <span class="theme-icon" aria-hidden="true">☀</span>
+      </button>
+    </header>
+
+    <nav class="contact" aria-label="Contato">
+      <a href="https://github.com/TacioMoreira25" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/taciomoreira" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:taciomoreiraa@gmail.com">taciomoreiraa@gmail.com</a>
+    </nav>
+
+    <section class="section" aria-labelledby="projetos">
+      <h2 id="projetos">Projetos</h2>
+
+      <ol class="project-list">
+        <li class="project">
+          <h3><span class="name">Orbit</span><span class="sep"> — </span><span class="subtitle">Transferência P2P em rede local</span></h3>
+          <p>Envio de arquivos e clipboard entre Android e Linux sem nuvem. Streaming com memória constante (~1,39 MB de RAM em arquivo de 1 GB), integridade SHA-256 e progresso em tempo real via WebSockets.</p>
+          <p class="stack">Node.js · Fastify · TypeScript · Flutter · systemd</p>
+          <p class="links"><a href="https://github.com/TacioMoreira25/Orbit" target="_blank" rel="noopener">código</a></p>
+        </li>
+
+        <li class="project">
+          <h3><span class="name">Relay</span><span class="sep"> — </span><span class="subtitle">Proxy reverso e inspetor HTTP</span></h3>
+          <p>Aplicativo desktop que intercepta e inspeciona tráfego HTTP/WebSocket local. Importa coleções OpenAPI e Postman, reenvia requisições, simula falhas de rede e roda checagens de segurança (DAST, BOLA).</p>
+          <p class="stack">Rust · Tauri · Svelte</p>
+          <p class="links"><a href="https://github.com/TacioMoreira25/Relay" target="_blank" rel="noopener">código</a></p>
+        </li>
+
+        <li class="project">
+          <h3><span class="name">GastoSync</span><span class="sep"> — </span><span class="subtitle">Gestão financeira pessoal com IA</span></h3>
+          <p>App Web e Android com persistência local em SQLite (Drift) e sincronização com API em Go, além de um agente em Python para análise de gastos e orçamento. Em produção.</p>
+          <p class="stack">Flutter · SQLite (Drift) · Go · Python (FastAPI) · Groq</p>
+          <p class="links">
+            <a href="https://github.com/TacioMoreira25/GastoSync" target="_blank" rel="noopener">código</a>
+            <a href="https://gastosync.pages.dev" target="_blank" rel="noopener">web</a>
+            <a href="https://github.com/TacioMoreira25/GastoSync/releases/latest" target="_blank" rel="noopener">apk</a>
+          </p>
+        </li>
+
+        <li class="project">
+          <h3><span class="name">Robô Inspetor</span><span class="sep"> — </span><span class="subtitle">Inspeção visual e térmica embarcada</span></h3>
+          <p>Robô terrestre com ESP32 e sensor infravermelho MLX90614 (I2C). Chassi 3D modelado no Onshape, corte automático dos motores por perda de sinal (Watchdog) e controle pelo navegador.</p>
+          <p class="stack">ESP32 · C++ · PlatformIO · Onshape</p>
+          <div class="thumbs">
+            <img src="assets/img/ugv_exterior.jpg" alt="Robô Inspetor montado, visto de frente" class="zoomable" loading="lazy" />
+            <img src="assets/img/ugv_eletronica.jpg" alt="Parte interna do Robô Inspetor com ESP32, ponte H e baterias" class="zoomable" loading="lazy" />
+          </div>
+          <p class="links"><a href="https://github.com/TacioMoreira25/robo-inspetor" target="_blank" rel="noopener">código</a></p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" aria-labelledby="stack">
+      <h2 id="stack">Stack</h2>
+      <dl class="stack-list">
+        <div><dt>Linguagens</dt><dd>TypeScript, C#, Python, Java, Go, Rust, C++</dd></div>
+        <div><dt>Back-end</dt><dd>Node.js, .NET 8, Spring Boot, FastAPI</dd></div>
+        <div><dt>Front-end e mobile</dt><dd>Angular, React, Svelte, Flutter</dd></div>
+        <div><dt>Dados e mensageria</dt><dd>PostgreSQL, MySQL, MongoDB, SQLite, Redis, RabbitMQ</dd></div>
+        <div><dt>Infra e qualidade</dt><dd>Docker, GitHub Actions, Testcontainers, Linux</dd></div>
+      </dl>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Fechar imagem">×</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
